@@ -1,0 +1,62 @@
+diff --git a/node_modules/react-native/index.js b/node_modules/react-native/index.js
+index d59ba34..1a4a129 100644
+--- a/node_modules/react-native/index.js
++++ b/node_modules/react-native/index.js
+@@ -87,16 +87,16 @@ import typeof Vibration from './Libraries/Vibration/Vibration';
+ import typeof YellowBox from './Libraries/YellowBox/YellowBoxDeprecated';
+ 
+ // Plugins
+-import typeof {DynamicColorIOS} from './Libraries/StyleSheet/PlatformColorValueTypesIOS';
++import typeof { DynamicColorIOS } from './Libraries/StyleSheet/PlatformColorValueTypesIOS';
+ import typeof NativeModules from './Libraries/BatchedBridge/NativeModules';
+ import typeof Platform from './Libraries/Utilities/Platform';
+-import typeof {PlatformColor} from './Libraries/StyleSheet/PlatformColorValueTypes';
++import typeof { PlatformColor } from './Libraries/StyleSheet/PlatformColorValueTypes';
+ import typeof processColor from './Libraries/StyleSheet/processColor';
+ import typeof RCTDeviceEventEmitter from './Libraries/EventEmitter/RCTDeviceEventEmitter';
+ import typeof RCTNativeAppEventEmitter from './Libraries/EventEmitter/RCTNativeAppEventEmitter';
+-import typeof {RootTagContext} from './Libraries/ReactNative/RootTag';
++import typeof { RootTagContext } from './Libraries/ReactNative/RootTag';
+ 
+-import type {HostComponent as _HostComponentInternal} from './Libraries/Renderer/shims/ReactNativeTypes';
++import type { HostComponent as _HostComponentInternal } from './Libraries/Renderer/shims/ReactNativeTypes';
+ 
+ export type HostComponent<T> = _HostComponentInternal<T>;
+ 
+@@ -435,32 +435,16 @@ module.exports = {
+   },
+   // Deprecated Prop Types
+   get ColorPropType(): $FlowFixMe {
+-    invariant(
+-      false,
+-      'ColorPropType has been removed from React Native. Migrate to ' +
+-        "ColorPropType exported from 'deprecated-react-native-prop-types'.",
+-    );
++    return require('deprecated-react-native-prop-types').ColorPropType;
+   },
+   get EdgeInsetsPropType(): $FlowFixMe {
+-    invariant(
+-      false,
+-      'EdgeInsetsPropType has been removed from React Native. Migrate to ' +
+-        "EdgeInsetsPropType exported from 'deprecated-react-native-prop-types'.",
+-    );
++    return require('deprecated-react-native-prop-types').EdgeInsetsPropType;
+   },
+   get PointPropType(): $FlowFixMe {
+-    invariant(
+-      false,
+-      'PointPropType has been removed from React Native. Migrate to ' +
+-        "PointPropType exported from 'deprecated-react-native-prop-types'.",
+-    );
++    return require('deprecated-react-native-prop-types').PointPropType;
+   },
+   get ViewPropTypes(): $FlowFixMe {
+-    invariant(
+-      false,
+-      'ViewPropTypes has been removed from React Native. Migrate to ' +
+-        "ViewPropTypes exported from 'deprecated-react-native-prop-types'.",
+-    );
++    return require('deprecated-react-native-prop-types').ViewPropTypes;
+   },
+ };
+ 
